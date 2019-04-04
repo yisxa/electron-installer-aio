@@ -5,6 +5,7 @@
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
+    "open": "electron ./src",
     "ico": "png-to-ico ./app/assets/images/icon.png > app.ico",
     "icns": "png2icns ./app/assets/images/icon.png",
     "start": "electron-forge start",

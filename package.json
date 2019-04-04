@@ -1,0 +1,121 @@
+{
+  "name": "xivig",
+  "productName": "xivig",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "ico": "png-to-ico ./app/assets/images/icon.png > app.ico",
+    "icns": "png2icns ./app/assets/images/icon.png",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --color"
+  },
+  "keywords": [
+    "xivig",
+    "responsive",
+    "design",
+    "development",
+    "webapp"
+  ],
+  "author": "Bandhu",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip",
+          "dmg"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm",
+        "asar": true,
+        "quiet": true,
+        "icon": "./app/assets/images/icon/icon.png",
+        "win32metadata": {
+          "CompanyName": "Blizzard",
+          "FileDescription": "Cool Xivig Responsive App",
+          "ProductName": "xivig",
+          "InternalName": "xivig"
+        }
+      },
+      "electronInstallerDMG": {
+        "background": "./app/assets/images/icon/background.png",
+        "icon": "./app/assets/images/icon/icon.icns",
+        "format": "ULFO"
+      },
+      "electronWinstallerConfig": {
+        "name": "Xivig",
+        "owners": "Blizzard",
+        "authors": "Bandhu",
+        "title": "Xivig Responsive App",
+        "setupExe": "setup.exe",
+        "setupMSI": "setup.msi",
+        "noMsi": false,
+        "loadingGif": "./app/assets/images/icon/spinner.gif",
+        "iconUrl": "https://raw.githubusercontent.com/yisxa/responsive-webdesign-xivig/xivig2/app/favicon.ico",
+        "setupIcon": "./app/assets/images/icon/icon.ico",
+        "description": "Xivig cool Responsive Web App"
+      },
+      "electronInstallerDebian": {
+        "icon": "./app/assets/images/icon/icon.png",
+        "categories": [
+          "Utility"
+        ],
+        "homepage": "https:/www.xivig.com"
+      },
+      "electronInstallerRedhat": {
+        "icon": "./app/assets/images/icon/icon.png",
+        "license": "MIT",
+        "requires": [
+          "lsb",
+          "libappindicator"
+        ],
+        "compressionLevel": 9,
+        "categories": [
+          "Utility"
+        ],
+        "homepage": "https:/www.xivig.com"
+      },
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "Xivig",
+        "name": "Xivig Responsive"
+      }
+    }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "png-to-ico": "^2.0.2",
+    "png2icns": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-installer-dmg": "^2.0.0",
+    "electron-winstaller": "^3.0.4",
+    "electron-prebuilt-compile": "4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "electron-reload": "^1.4.0"
+  }
+}

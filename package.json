@@ -13,6 +13,14 @@
     "publish": "electron-forge publish",
     "lint": "eslint src --color"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yisxa/electron-installer-aio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yisxa/electron-installer-aio/issues"
+  },
+  "homepage": "https://github.com/yisxa/electron-installer-aio#readme",
   "keywords": [
     "xivig",
     "responsive",
